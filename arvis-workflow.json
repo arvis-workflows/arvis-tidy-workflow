@@ -1,0 +1,34 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jopemachine/arvis-extension-validator/master/workflow-schema.json",
+  "creator": "importre",
+  "description": "Arvis workflow to beautify JSON/XML in clipboard",
+  "name": "arvis-tidy-workflow",
+  "readme": "See https://github.com/jopemachine/arvis-tidy-workflow",
+  "version": "0.0.2",
+  "defaultIcon": "icon.png",
+  "webAddress": "https://github.com/jopemachine/arvis-tidy-workflow",
+  "enabled": true,
+  "platform": [
+    "darwin",
+    "linux"
+  ],
+  "commands": [
+    {
+      "type": "scriptFilter",
+      "command": "tidy",
+      "title": "Type JSON or XML",
+      "subtitle": "Beutify JSON or XML in clipboard",
+      "scriptFilter": "node ./src/index.js \"{query}\"",
+      "runningSubtext": "",
+      "withspace": true,
+      "argType": "optional",
+      "actions": [
+        {
+          "modifiers": "normal",
+          "type": "script",
+          "script": "node ./src/tidy.js \"{query}\""
+        }
+      ]
+    }
+  ]
+}

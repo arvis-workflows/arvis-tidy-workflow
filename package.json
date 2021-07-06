@@ -1,0 +1,36 @@
+{
+  "name": "arvis-tidy-workflow",
+  "version": "0.0.2",
+  "description": "Arvis workflow to beautify JSON/XML in clipboard",
+  "license": "MIT",
+  "repository": "importre/arvis-tidy",
+  "author": {
+    "name": "Jaewe Heo",
+    "email": "jaeweheo@gmail.com",
+    "url": "importre.com"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "scripts": {
+    "postinstall": "arvish-init",
+    "preuninstall": "arvish-cleanup"
+  },
+  "files": [
+    "src",
+    "icon.png",
+    "arvis-workflow.json"
+  ],
+  "keywords": [
+    "arvis",
+    "arvish",
+    "tidy",
+    "pretty",
+    "beautify",
+    "xml",
+    "json"
+  ],
+  "dependencies": {
+    "arvish": ">=0.4.6"
+  }
+}
